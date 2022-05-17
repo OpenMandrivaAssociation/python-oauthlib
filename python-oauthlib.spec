@@ -1,7 +1,7 @@
 %global pypi_name oauthlib
 
 Name:           python-%{pypi_name}
-Version:	3.1.0
+Version:	3.2.0
 Release:	1
 Summary:        Implementation of the OAuth request signing logic
 Group:          Development/Python
@@ -39,4 +39,4 @@ thin veneer on top of OAuthLib and get OAuth support for very little effort.
 
 %files -n python-%{pypi_name}
 %{python3_sitelib}/%{pypi_name}/
-%{python3_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python3_sitelib}/%{pypi_name}-%{version}-py*.egg-info
