@@ -1,7 +1,7 @@
 %global pypi_name oauthlib
 
 Name:           python-%{pypi_name}
-Version:	3.2.0
+Version:	3.2.2
 Release:	1
 Summary:        Implementation of the OAuth request signing logic
 Group:          Development/Python
