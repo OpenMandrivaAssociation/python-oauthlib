@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:	3.2.2
-Release:	1
+Release:	2
 Summary:        Implementation of the OAuth request signing logic
 Group:          Development/Python
 License:        MIT
