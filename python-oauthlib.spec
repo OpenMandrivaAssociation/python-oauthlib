@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:	3.2.2
-Release:	2
+Release:	3
 Summary:        Implementation of the OAuth request signing logic
 Group:          Development/Python
 License:        MIT
@@ -25,7 +25,7 @@ They assume the usage of a specific HTTP request library.
 OAuthLib is a framework which implements the logic of OAuth1 or OAuth2 without
 assuming a specific HTTP request object or web framework. Use it to graft OAuth
 client support onto your favorite HTTP library, or provide support onto your
-favourite web framework. If you’re a maintainer of such a library, write a
+favourite web framework. If you're a maintainer of such a library, write a
 thin veneer on top of OAuthLib and get OAuth support for very little effort.
 
 %prep
