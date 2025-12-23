@@ -1,17 +1,17 @@
 %global pypi_name oauthlib
 
 Name:           python-%{pypi_name}
-Version:	3.2.2
-Release:	4
+Version:	3.3.1
+Release:	1
 Summary:        Implementation of the OAuth request signing logic
 Group:          Development/Python
 License:        MIT
 URL:            https://pypi.python.org/pypi/oauthlib
 Source0:	https://files.pythonhosted.org/packages/source/o/oauthlib/oauthlib-%{version}.tar.gz
 BuildArch:      noarch
-BuildRequires:  pkgconfig(python3)
-BuildRequires:  python3dist(setuptools)
-BuildRequires:	python3dist(setuptools-scm)
+BuildSystem:	python
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(setuptools-scm)
 
 %description
 OAuth often seems complicated and difficult-to-implement. There are several
@@ -28,15 +28,6 @@ client support onto your favorite HTTP library, or provide support onto your
 favourite web framework. If you're a maintainer of such a library, write a
 thin veneer on top of OAuthLib and get OAuth support for very little effort.
 
-%prep
-%autosetup -p1 -n %{pypi_name}-%{version}
-
-%build
-%py3_build
-
-%install
-%py3_install
-
 %files -n python-%{pypi_name}
-%{python3_sitelib}/%{pypi_name}/
-%{python3_sitelib}/%{pypi_name}-%{version}-py*.egg-info
+%{python_sitelib}/%{pypi_name}/
+%{python_sitelib}/%{pypi_name}-%{version}-py*.egg-info
