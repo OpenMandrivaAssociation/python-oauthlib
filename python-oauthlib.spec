@@ -1,7 +1,7 @@
 %global pypi_name oauthlib
 
 Name:           python-%{pypi_name}
-Version:	3.3.1
+Version:	4.0.0
 Release:	1
 Summary:        Implementation of the OAuth request signing logic
 Group:          Development/Python
@@ -27,6 +27,10 @@ assuming a specific HTTP request object or web framework. Use it to graft OAuth
 client support onto your favorite HTTP library, or provide support onto your
 favourite web framework. If you're a maintainer of such a library, write a
 thin veneer on top of OAuthLib and get OAuth support for very little effort.
+
+%build -p
+# The sdist is not a git checkout, so the versioning backend needs the version.
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 
 %files -n python-%{pypi_name}
 %{python_sitelib}/%{pypi_name}/
